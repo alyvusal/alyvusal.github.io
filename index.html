@@ -21,14 +21,9 @@
                 </div>
                 <h1 class="name">Vusal Aliyev</h1>
                 <p class="title">DevOps/SRE Engineer</p>
-                <p class="pronunciation">😄 Pronouns: <code>/vuˈsɑːl ˈɑːliev/</code>, In Russian: Вусал Алиев</p>
+                <p class="pronunciation">😄 Pronouns: <code>/vuˈsɑːl ˈɑːliev/</code>, In Russian: Вусал Алиев <button id="say-name-btn" class="voice-btn" title="Pronounce name"><i class="fas fa-volume-up"></i></button></p>
 
-                <div class="badges">
-                    <span class="badge">RHCE Certified</span>
-                    <span class="badge">CCNP Certified</span>
-                    <span class="badge">CCDP Certified</span>
-                    <span class="badge">CCNA Security</span>
-                </div>
+
 
                 <div class="contact-info">
                     <a href="mailto:aly.vusal@gmail.com" class="contact-link">
@@ -44,6 +39,20 @@
                         GitHub
                     </a>
                 </div>
+                <div class="cert-badges">
+                    <a href="https://www.redhat.com/en/services/certification/rhce" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/RHCE-Certified-red?logo=redhat&logoColor=white" alt="RHCE Certified" />
+                    </a>
+                    <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccnp.html" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/CCNP-Certified-1C75BC?logo=cisco&logoColor=white" alt="CCNP Certified" />
+                    </a>
+                    <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccdp.html" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/CCDP-Certified-1C75BC?logo=cisco&logoColor=white" alt="CCDP Certified" />
+                    </a>
+                    <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/CCNA_Security-Certified-1C75BC?logo=cisco&logoColor=white" alt="CCNA Security Certified" />
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -51,8 +60,18 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Experience Summary -->
-            <section class="section">
+            <div class="content-layout">
+                <aside class="left-sidebar">
+                    <nav class="quick-nav">
+                        <a href="#overview" class="btn btn-secondary" data-target="overview"><i class="fas fa-home"></i> Overview</a>
+                        <a href="#tech-stack" class="btn btn-secondary" data-target="tech-stack"><i class="fas fa-layer-group"></i> Tech Stack</a>
+                        <a href="#education" class="btn btn-secondary" data-target="education"><i class="fas fa-graduation-cap"></i> Education</a>
+                        <a href="#demos" class="btn btn-secondary" data-target="demos"><i class="fas fa-rocket"></i> Project Demos</a>
+                    </nav>
+                </aside>
+                <div class="content-main">
+            <!-- Experience Summary (Overview) -->
+            <section class="section section-panel" id="overview">
                 <div class="experience-summary fade-in-up">
                     <h3>🚀 Professional Summary</h3>
                     <p>I have 17+ years IT experience with 6+ years specializing in DevOps/SRE across multi-cloud environments (AWS, GCP, Azure) using Kubernetes, Ansible, Terraform, Docker, CI/CD pipelines and various observability solutions like New Relic, Grafana, LGTM stack and others for infrastructure automation and monitoring. I'm CCNP/RHCE certified with expertise spanning traditional data centers to modern cloud-native architectures.</p>
@@ -61,7 +80,7 @@
             </section>
 
             <!-- Skills Section -->
-            <section class="section">
+            <section class="section section-panel" id="tech-stack">
                 <h2 class="section-title">🛠️ Technical Skills</h2>
 
                 <div class="skills-grid">
@@ -186,9 +205,9 @@
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/circleci/circleci-plain.svg" alt="CircleCI">
                                 <span>CircleCI</span>
                             </a>
-                            <a href="#" class="skill-item">
-                                <img src="https://skillicons.dev/icons?i=gitlab" alt="GitLab CI">
-                                <span>GitLab CI</span>
+                            <a href="https://github.com/alyvusal/gitlab" class="skill-item">
+                                <img src="https://skillicons.dev/icons?i=gitlab" alt="Gitlab CI">
+                                <span>Gitlab CI</span>
                             </a>
                             <a href="https://github.com/alyvusal/flux" class="skill-item">
                                 <img src="https://avatars.githubusercontent.com/u/52158677?v=4" alt="FluxCD">
@@ -458,8 +477,35 @@
                 </div>
             </section>
 
+            <section class="section section-panel" id="education">
+                <h2 class="section-title">🎓 Education</h2>
+                <div class="education-list">
+                    <div class="education-item">
+                        <h3>
+                            <a class="edu-link" href="https://www.bsu.edu.az/en" target="_blank" rel="noopener noreferrer">
+                                <img class="edu-logo" src="https://upload.wikimedia.org/wikipedia/az/5/56/BDU_yeni.jpeg" alt="Baku State University logo">
+                                Baku State University
+                            </a>
+                        </h3>
+                        <p class="muted">Sep 2007 - Jun 2009</p>
+                        <p>Master's degree • Laser and Optical Engineering</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>
+                            <a class="edu-link" href="https://www.bsu.edu.az/en" target="_blank" rel="noopener noreferrer">
+                                <img class="edu-logo" src="https://upload.wikimedia.org/wikipedia/az/5/56/BDU_yeni.jpeg" alt="Baku State University logo">
+                                Baku State University
+                            </a>
+                        </h3>
+                        <p class="muted">Sep 2001 - Jun 2005</p>
+                        <p>Bachelor's degree • Electrical and Electronics Engineering</p>
+                    </div>
+                </div>
+            </section>
+
+
             <!-- Demos Section -->
-            <section class="section">
+            <section class="section section-panel" id="demos">
                 <h2 class="section-title">🚀 Project Demos</h2>
 
                 <div class="demos-grid">
@@ -553,6 +599,8 @@
                     </div>
                 </div>
             </section>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -591,23 +639,48 @@
         });
 
         // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Toggle panels via sidebar buttons
+        function showPanel(id) {
+            document.querySelectorAll('.section-panel').forEach(sec => sec.classList.remove('active'));
+            const target = document.getElementById(id);
+            if (target) target.classList.add('active');
+            document.querySelectorAll('.quick-nav .btn').forEach(b => b.classList.remove('active'));
+            const activeBtn = document.querySelector(`.quick-nav .btn[data-target="${id}"]`);
+            if (activeBtn) activeBtn.classList.add('active');
+        }
+
+        document.querySelectorAll('.quick-nav .btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                const id = btn.getAttribute('data-target');
+                if (id) showPanel(id);
             });
         });
 
         // Add loading animation
         window.addEventListener('load', () => {
             document.body.style.opacity = '1';
+            showPanel('overview');
         });
+
+        const sayBtn = document.getElementById('say-name-btn');
+        if (sayBtn && 'speechSynthesis' in window) {
+            sayBtn.addEventListener('click', () => {
+                const utterance = new SpeechSynthesisUtterance('Вусал Алиев');
+                utterance.lang = 'az-AZ';
+                utterance.rate = 1;
+                utterance.pitch = 1;
+                // Prefer male-like voice if available
+                const voices = window.speechSynthesis.getVoices();
+                const ruVoices = voices.filter(v => v.lang.startsWith('ru'));
+                const preferred = ruVoices.find(v => /male|man|Maxim|Alexander|Yuri|Yury|Nikolai/i.test(v.name)) || ruVoices[0] || voices[0];
+                if (preferred) utterance.voice = preferred;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utterance);
+            });
+            // Some browsers load voices asynchronously
+            window.speechSynthesis.onvoiceschanged = () => {};
+        }
     </script>
 </body>
 </html>
