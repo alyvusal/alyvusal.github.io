@@ -29,6 +29,14 @@ body {
     background: var(--bg-primary);
 }
 
+.hint-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -37,9 +45,9 @@ body {
 
 /* Header Section */
 .header {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0b1324 100%);
     color: white;
-    padding: 80px 0 60px;
+    padding: 20px 0 24px;
     position: relative;
     overflow: hidden;
 }
@@ -51,8 +59,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
+    background: radial-gradient(1000px 200px at 50% -200px, rgba(255,255,255,0.08), rgba(255,255,255,0) 60%),
+                radial-gradient(600px 200px at 20% -120px, rgba(99,102,241,0.25), rgba(99,102,241,0) 70%),
+                radial-gradient(600px 200px at 80% -120px, rgba(34,197,94,0.2), rgba(34,197,94,0) 70%);
+    opacity: 1;
 }
 
 .header-content {
@@ -60,6 +70,8 @@ body {
     z-index: 1;
     text-align: center;
 }
+
+/* identity panel removed */
 
 .profile-image {
     width: 120px;
@@ -79,7 +91,7 @@ body {
 .name {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     letter-spacing: -0.025em;
 }
 
@@ -87,13 +99,27 @@ body {
     font-size: 1.25rem;
     font-weight: 400;
     opacity: 0.9;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
 }
 
 .pronunciation {
     font-size: 0.9rem;
     opacity: 0.8;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
+}
+
+.voice-btn {
+    margin-left: 8px;
+    padding: 4px 8px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+.voice-btn:hover {
+    background: rgba(255,255,255,0.2);
 }
 
 .badges {
@@ -117,7 +143,7 @@ body {
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
@@ -127,7 +153,7 @@ body {
     gap: 8px;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 6px 20px;
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -140,10 +166,65 @@ body {
     transform: translateY(-2px);
 }
 
+.cert-badges {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cert-badges img {
+    height: 24px;
+}
+
 /* Main Content */
 .main-content {
     padding: 60px 0;
 }
+
+/* Sidebar layout */
+.content-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+}
+
+.left-sidebar {
+    position: sticky;
+    top: 16px;
+    height: fit-content;
+}
+
+.quick-nav {
+    display: grid;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-secondary {
+    background: var(--bg-accent);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn.active {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.section-panel { display: none; }
+.section-panel.active { display: block; }
 
 .section {
     margin-bottom: 60px;
@@ -189,6 +270,31 @@ body {
     line-height: 1.7;
 }
 
+.education-list {
+    display: grid;
+    gap: 16px;
+}
+
+.education-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.edu-link {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.edu-logo {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 2px;
+}
+
 /* Skills Grid */
 .skills-grid {
     display: grid;
@@ -227,8 +333,8 @@ body {
 
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
 }
 
 .skill-item {
@@ -236,7 +342,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 15px 10px;
+    padding: 12px 8px;
     border-radius: 8px;
     background: var(--bg-secondary);
     transition: all 0.3s ease;
@@ -250,9 +356,9 @@ body {
 }
 
 .skill-item img {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 8px;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 6px;
     object-fit: contain;
 }
 
@@ -338,6 +444,18 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+    }
+
+    .content-layout {
+        grid-template-columns: 240px 1fr;
+        gap: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
